@@ -51,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () async {
           final response = await dio.get("/todos");
           todos = response.data;
+          setState(() {});
         },
         tooltip: 'Increment',
         child: const Icon(Icons.menu),
